@@ -1,0 +1,22 @@
+---
+
+const { tal, titel, firma, periode, jobtype } = Astro.props; 
+---
+<div class="grid grid-cols-4 gap-4 items-start m-4">
+  <!-- Nummer -->
+  <div class="text-4xl font-bold col-span-1">
+    <span class="italic">{tal ? tal.toString().padStart(2, "0"):""}</span>
+       
+  </div>
+
+  <!-- Indhold -->
+  <div class="col-span-3 pl-3">
+    <h3 class="font-bold text-sm">{titel}</h3>
+     <p class="text-xs italic font-thin text-gray-600">{periode}</p>
+
+    <p class="text-xs">{firma}, {jobtype}</p>
+  </div>
+</div>
+
+
+</div>

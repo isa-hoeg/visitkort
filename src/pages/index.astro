@@ -1,15 +1,88 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
+import Button from "../components/Button.astro";
+import Cv from "../components/Cv.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+
+<MainLayout title="Visitkort">
+  <section class="container mx-auto grid grid-cols-1 items-center gap-2 p-7 bg-gradient-to-r from-red-700 from-[50%] to-[#EEF6E7] to-[50%]">
+    <!-- 
+    bg-gradient-to-r       = laver en gradient fra venstre til højre
+    from-red-700           = første farve (rød)
+    to-white               = sidste farve (hvid)
+    from-[50%]             = den røde farve fylder helt indtil præcis 50%
+    to-[50%]               = den hvide farve starter præcis fra 50%
+    Når from og to begge står på 50%, bliver overgangen knivskarp (ingen fade)
+    -->
+    <div>
+      <img class="mx-auto mb-5" src="/h1.webp" alt="navn" />
+    </div>
+    <div class="relative flex justify-center mt-5 mb-30">
+    <!-- midterste billede -->
+    <img class="w-50 rounded-full z-40 relative" src="/mig.svg" alt="Isabella" />
+
+    <!-- højre billede -->
+    <img class="absolute w-30 rounded-full z-20 right-15 top-5" src="/rejse.svg" alt="solopgang" />
+
+    <!-- venstre billede -->
+    <img class="absolute w-20 rounded-full z-30 left-70 bottom-0" src="/cafe.svg" alt="cafe" />
+    <!-- cirkler -->
+    <img class="absolute w-45  z-20 -left-10 bottom-5" src="/cirkel.svg" alt="cirkel" />
+    <img class="absolute w-30  z-20 left-25 bottom-35" src="/cirkel_rund.svg" alt="cirkel" />
+    <img class="absolute w-25  z-20 left-35 -bottom-40" src="/cirkel_rund.svg" alt="cirkel" />
+  </div>
+  </section>
+  <section>
+    <h2 class="text-center text-xl pt-10">Isabella Hoeg Hansen</h2>
+    <div class="border-1 border-black rounded-sm p-5 m-5">
+      <h3 class="text-center font-bold pb-3">Æstetik og brugervenlighed hånd i hånd</h3>
+      <p class="text-sm pb-4">
+        Jeg studerer multimediedesign på Erhvervsakademi København, hvor jeg
+        netop er startet på 3. semester med valgfaget Digital Design.</p>
+        
+        <p class="text-sm pb-4">Jeg brænder
+        for grafisk design, digital æstetik og brugervenlige løsninger, og jeg elsker
+        at kombinere kreativitet med struktur. Gennem det første år har jeg bl.a.
+        lært, hvor vigtigt det er, at UI og UX går hånd i hånd. Et design kan være
+        nok så smukt, men hvis det ikke fungerer i praksis, skaber det heller ikke
+        værdi for brugeren.</p>
+
+        <p class="text-sm">Jeg har altid mange idéer og trives godt i den
+        tidlige idé- og udviklingsfase, hvor der er plads til at udforske og eksperimentere.
+        Jeg synes, det er sjovt at gå i tænkeboks, undersøge muligheder og lege med
+        koncepter, før designet tager form. I mit arbejde har jeg fokus på at skabe
+        klare visuelle identiteter og intuitive brugeroplevelser, der fungerer på
+        tværs af platforme. Gennem mine to første semestre har jeg særligt fået en
+        kærlighed til Figma, hvor jeg kan sidde i timevis og nørkle med farver, typografi,
+        layouts og prototyper.
+      </p>
+    </div>
+    <Button>Find mig her</Button>
+  </section>
+  <section>
+    <img class="w-100 mx-auto" src="/grafisk_designer.webp" alt="grafisk designer" />
+  </section>
+  <section class="container mx-auto grid grid-cols-2 border-1 border-black rounded-sm m-5">
+    <div class="p-3">
+    <Cv tal={1} titel="Blomsterbinder" firma="Blomsterhjørnet" jobtype="deltid" periode="2017-2018" />
+    <Cv tal={2} titel="Butiksassistent" firma="Søstrene Grene" jobtype="deltid" periode="2018-2020" />
+    <Cv tal={3} titel="Butiksassistent" firma="Matas" jobtype="deltid" periode="2020-2021" />
+    <Cv tal={4} titel="Retsbud/assistent" firma="Københavns Byret" jobtype="fuldtid" periode="2021-2022" />
+    <Cv tal={5} titel="Tjener" firma="StudentCrew" jobtype="kontrakt" periode="2021-2022" />
+    <Cv tal={6} titel="Værtinde" firma="Royal Arena" jobtype="deltid" periode="2021-2025" />
+    <Cv tal={7} titel="Rejseleder" firma="Spies Rejser" jobtype="fuldtid" periode="2022-2023" />
+    <Cv tal={8} titel="Studentermedhjælper" firma="Københavns Byret" jobtype="deltid" periode="2023-i dag" />
+    <Cv tal={9} titel="Kontrollør" firma="Wellsys Security" jobtype="deltid" periode="2023-i dag" />
+    <Cv tal={10} titel="Tjener" firma="Radisson Blu" jobtype="kontrakt" periode="2024-i dag" />
+   </div>
+  <div class="bg-[url(/baggrund.webp)] bg-cover">
+  
+  </div>
+
+    
+  </section>
+
 </MainLayout>
