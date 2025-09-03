@@ -1,5 +1,37 @@
 ---
 // Henter parametrene fra Astro.props
-const { href="#", target="_self"} = Astro.props; 
+const { href="#", target="_self", variant="textlink", size="standard"} = Astro.props; 
+
+//Definer den styling (Tailwind classes, der gør sig gældende for alle links
+const linkStyling = "bg-white/30 backdrop-blur-md border border-white/40 text-black font-display text-ml px-4 py-2 rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-xl hover:bg-red-700/30 hover:bg-red-700/50";
+// bg-white/30 → hvid baggrund med 30% opacity.
+// backdrop-blur-md → slører baggrunden bag knappen (glass-effekten).
+// border border-white/40 → en let transparent border.
+// rounded-xl → afrundede hjørner.
+
+//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
+
+const variantClasses = {
+
+"primary": "font-display",
+
+"secondary": "font-medium"
+
+};
+ 
+//Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
+
+const sizeClasses = {
+
+"large": "text-ml",
+
+"medium": "text-sm",
+
+"small": "text-xs"
+
+};
 ---
-<a href={href} class="underline" target={target}><slot /></a>
+
+
+<a href={href} target={target} class:list={[linkStyling, variantClasses[variant], sizeClasses[size]]}><slot /></a>
+

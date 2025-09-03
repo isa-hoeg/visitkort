@@ -1,5 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Egenskaber from "../components/Egenskaber.astro";
+import Skills from "../components/Skills.astro";
 import Button from "../components/Button.astro";
 import Cv from "../components/Cv.astro";
 import Link from "../components/Link.astro";
@@ -36,21 +38,21 @@ import thumbsup from "../assets/images/thumbsup.png";
   </div>
   </section>
   <section>
-    <h2 class="text-center text-xl pt-10">Isabella Hoeg Hansen</h2>
-    <div class="border-1 border-black rounded-sm p-5 m-5">
-      <h3 class="text-center font-bold pb-3">Æstetik og brugervenlighed hånd i hånd</h3>
-      <p class="text-sm pb-4">
+    <h2 class="font-sans text-center text-2xl pt-10">Isabella Hoeg Hansen</h2>
+    <div class="border border-black rounded-sm p-5 m-5">
+      <h3 class="font-display text-center font-bold pb-3">Æstetik og brugervenlighed hånd i hånd</h3>
+      <p class="font-serif text-sm pb-4">
         Jeg studerer multimediedesign på Erhvervsakademi København, hvor jeg
         netop er startet på 3. semester med valgfaget Digital Design.</p>
         
-        <p class="text-sm pb-4">Jeg brænder
+        <p class="font-serif text-sm pb-4">Jeg brænder
         for grafisk design, digital æstetik og brugervenlige løsninger, og jeg elsker
         at kombinere kreativitet med struktur. Gennem det første år har jeg bl.a.
         lært, hvor vigtigt det er, at UI og UX går hånd i hånd. Et design kan være
         nok så smukt, men hvis det ikke fungerer i praksis, skaber det heller ikke
         værdi for brugeren.</p>
 
-        <p class="text-sm">Jeg har altid mange idéer og trives godt i den
+        <p class="font-serif text-sm">Jeg har altid mange idéer og trives godt i den
         tidlige idé- og udviklingsfase, hvor der er plads til at udforske og eksperimentere.
         Jeg synes, det er sjovt at gå i tænkeboks, undersøge muligheder og lege med
         koncepter, før designet tager form. I mit arbejde har jeg fokus på at skabe
@@ -60,13 +62,17 @@ import thumbsup from "../assets/images/thumbsup.png";
         layouts og prototyper.
       </p>
     </div>
-    <Button>Find mig her</Button>
+    <div class="flex justify-center m-8">
+    <Link href="https://www.linkedin.com/in/isabella-hoeg-hansen-563518239/" target="_blank" variant="primary" size="medium">Find mig her!</Link>
+    </div>
   </section>
   <section>
-    <img class="w-100 mx-auto" src="/grafisk_designer.webp" alt="grafisk designer" />
+    <img class="w-100 mx-auto pb-5" src="/grafisk_designer.webp" alt="grafisk designer" />
+    <Egenskaber></Egenskaber>
+    <hr class="my-6 h-px w-full bg-black border-0" />
   </section>
-  <section class="container mx-auto grid grid-cols-2 border-1 border-black rounded-sm m-5">
-    <div class="p-3">
+  <section class="container mx-auto md:grid grid-cols-2">
+    <div class=" mx-30 my-10">
     <Cv tal={1} titel="Blomsterbinder" firma="Blomsterhjørnet" jobtype="deltid" periode="2017-2018" />
     <Cv tal={2} titel="Butiksassistent" firma="Søstrene Grene" jobtype="deltid" periode="2018-2020" />
     <Cv tal={3} titel="Butiksassistent" firma="Matas" jobtype="deltid" periode="2020-2021" />
@@ -78,11 +84,56 @@ import thumbsup from "../assets/images/thumbsup.png";
     <Cv tal={9} titel="Kontrollør" firma="Wellsys Security" jobtype="deltid" periode="2023-i dag" />
     <Cv tal={10} titel="Tjener" firma="Radisson Blu" jobtype="kontrakt" periode="2024-i dag" />
    </div>
-  <div class="bg-[url(/baggrund.webp)] bg-cover">
+  <div class="bg-[url(/baggrund.webp)] bg-cover p-10">
+    <div class="bg-[#EEF6E7] border border-black rounded-sm px-8 py-5 m-2 mb-15">
+      <div class="flex items-center gap-10 p-3">
+      <img class="w-18 rounded-full z-40 relative" src="/mig.svg" alt="Isabella" />
+        <div>
+        <h3 class="text-ml font-display">Min værktøjskasse:</h3>
+        <h4 class="font-sans">Isabella Hoeg Hansen</h4>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-center">
+      <Skills program="Figma"></Skills>
+      <Skills program="Adobe Illustrator"></Skills>
+      <Skills program="Astro"></Skills>
+      <Skills program="Adobe Premiere Pro"></Skills>
+      <Skills program="Visual Studio Code"></Skills>
+      <Skills program="Github"></Skills>
+      <Skills program="Microsoft Office"></Skills>
+      <Skills program="Canva"></Skills>
+      <Skills program="Adobe After Effects"></Skills>
+      <Skills program="Adobe Photoshop"></Skills>
+      </div>
+    </div>
   
-  </div>
+    <div class="bg-[#EEF6E7] border border-black rounded-sm px-8 py-5 m-2">
+      <img class="w-70 mx-auto p-3" src="/grafisk_designer.webp" alt="grafisk designer" />
+      <h3 class="text-ml text-center font-display">Kontaktoplysninger:</h3>
+        <div class="flex flex-col gap-5 m-8">
+          <Link href="tel:27648808" variant="primary" size="small" class="flex items-center gap-2">
+            <img class="w-5 h-5 inline-block" src="/phone.svg" alt="telefon-ikon" />
+            <span class="p-2">27 64 88 08</span>
+          </Link>
 
-    
-  </section>
+          <Link href="mailto:isabellahoeghansen@gmail.com" variant="primary" size="small" class="flex items-center gap-2">
+            <img class="w-5 h-5 inline-block" src="/mail.svg" alt="mail-ikon" />
+            <span class="p-2">isabellahoeghansen@gmail.com</span>
+          </Link>
+
+          <Link href="https://www.facebook.com/?ref=logo" variant="primary" size="small" class="flex items-center gap-2">
+            <img class="w-5 h-5 inline-block" src="/fb.svg" alt="facebook-ikon" />
+            <span class="p-2">Isabella Hoeg Hansen</span>
+          </Link>
+
+          <Link href="https://www.linkedin.com/in/isabella-hoeg-hansen-563518239/" target="_blank" variant="primary" size="small" class="flex items-center gap-2">
+            <img class="w-5 h-5 inline-block" src="/linkedin.svg" alt="linkedin-ikon" />
+            <span class="p-2">LinkedIn</span>
+          </Link>
+        </div>
+</div>
+
+      </div>
+</section>
 
 </MainLayout>

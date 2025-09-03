@@ -1,12 +1,39 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 @import "tailwindcss-animated";
 @import "tailwindcss-intersect";
 
+@font-face {
+  font-family: "HelveticaNeueBold";
+  src: url("/fonts/HelveticaNeueBold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "HelveticaNeueThin";
+  src: url("/fonts/HelveticaNeueThin.otf") format("truetype");
+}
+@font-face {
+  font-family: "HelveticaNeueBoldItalic";
+  src: url("/fonts/HelveticaNeueBoldItalic.otf") format("truetype");
+}
+@font-face {
+  font-family: "HelveticaNeueMedium";
+  src: url("/fonts/HelveticaNeueMedium.otf") format("truetype");
+}
 @theme {
   /* Her tilføjes theme variable // tokens */
+
+  /* Typografi */
+  --font-display: "HelveticaNeueBold", serif;
+  --font-sans: "Over the Rainbow", sans-serif;
+  --font-serif: "HelveticaNeueThin", serif;
+  --font-italic: "HelveticaNeueBoldItalic", serif;
+  --font-medium: "HelveticaNeueMedium", serif;
+
+  /* Farver */
+  --color-primary: #eef6e7;
 }
 
 @layer base {
@@ -19,9 +46,7 @@
   }
 }
 
-@layer components{
-
+@layer components {
 }
-@layer utilities{
-  
+@layer utilities {
 }
