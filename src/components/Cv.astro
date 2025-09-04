@@ -4,7 +4,7 @@ const { tal, titel, firma, periode, jobtype } = Astro.props;
 ---
 <div class="grid grid-cols-2 md:grid grid-cols-4 gap-25 md:items-start py-2 m-4">
   <!-- Nummer -->
-  <div class="text-6xl underline font-bold col-span-1 hover:text-red-700 hover:scale-110 transition-transform duration-300">
+  <div class="text-6xl underline font-bold col-span-1 hover:text-red-700 hover:scale-110">
     <span class="font-italic">{tal ? tal.toString().padStart(2, "0"):""}</span>
        
   </div>
