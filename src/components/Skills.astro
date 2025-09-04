@@ -1,10 +1,64 @@
----
+<!-- ---
 const {program} = Astro.props; 
 ---
 
-    <div class="bg-white/30 backdrop-blur-md border border-white/40 text-black font-display text-xs px-4 py-3 rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-xl m-2">
+    <div class="bg-white/20 backdrop-blur-lg border border-white/50 text-black font-display text-xs px-4 py-3 rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-xl m-2">
         <p>{program}</p>
     </div>
 
 
+</div> -->
+<!-- 
+---
+const { program, description } = Astro.props;
+---
+
+<div 
+  x-data="{ open: false }" 
+  x-on:click.outside="open = false" 
+  class="relative inline-block m-2"
+>
+  Skill-box
+  <div 
+    class="bg-white/20 backdrop-blur-lg border border-white/50 text-black font-display text-xs px-4 py-3 rounded-xl shadow-lg cursor-pointer transition-shadow duration-300 hover:shadow-xl"
+    x-on:click="open = !open"
+  >
+    <p>{program}</p>
+  </div>
+
+  Tooltip / beskrivelse -->
+  <!-- <div 
+    x-show="open"
+    x-transition
+    class="absolute left-1/2 -translate-x-1/2 mt-2 w-40 bg-white/80 backdrop-blur-md border border-white/40 text-black font-serif text-xs px-3 py-2 rounded-lg shadow-lg z-50 pointer-events-none"
+    x-cloak
+  >
+    {description}
+  </div>
+</div> -->
+
+---
+const { program, description } = Astro.props;
+---
+
+<div x-data="{ open: false }" class="relative inline-block m-2">
+  <!-- Skill-box -->
+  <div 
+    class="bg-white/20 backdrop-blur-lg border border-white/50 text-black font-display text-xs px-4 py-3 rounded-xl shadow-lg cursor-pointer transition-shadow duration-300 hover:shadow-xl hover:bg-red-700/70 hover:text-primary"
+    x-on:click="open = !open"
+  >
+    {program}
+  </div>
+
+  <!-- Dropdown / beskrivelse -->
+  <div 
+    x-show="open" 
+    x-transition
+    x-on:click.outside="open = false"
+    class="absolute left-1/2 -translate-x-1/2 mt-2 w-52 bg-red-700/70 backdrop-blur-md border border-white/40 text-primary font-medium font-serif text-xs px-4 py-3 rounded-lg shadow-lg z-50"
+    x-cloak
+  >
+    {description}
+  </div>
 </div>
+

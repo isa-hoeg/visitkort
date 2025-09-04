@@ -1,5 +1,39 @@
 ---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
 ---
-<div>
-<!-- Header - tilføj navigation mm. -->
-</div>
+<header x-data="{ showmenu: false }" class="bg-secondary-400" >
+    <div id="navbar" class="container flex items-center justify-between px-5 py-5 mx-auto">
+        <div id="logo" class="">
+            <a href="#" class="font-display text-4xl"><img class="w-10 md:w-15"src="/logo_hvid.svg" alt="logo"<img></a>
+        </div>
+        <div>
+            <p class="md:pl-52 font-sans text-2xl md:text-5xl italic drop-shadow-lg py-5">
+  <span class="text-primary">Digitalt</span> 
+  <span class="text-black">Visitkort</span>
+</p>
+        </div>
+        <nav id="desktopmenu" class="hidden lg:block">             
+            <img class="absolute w-25 md:w-25 z-20 -left-10 md:left-290 md:top-45" src="/red_half.svg" alt="red_cirkel" />              
+            <img class="absolute w-25 md:w-35 z-20 -left-10 md:left-190 md:top-120" src="/red_circle.svg" alt="red_cirkel" />       
+            <img class="absolute w-25 md:w-15 z-20 -left-10 md:left-210 md:-bottom-8 rotate-90" src="/red_half.svg" alt="red_cirkel" />          
+            <img class="absolute w-25 md:w-45 z-20 -left-10 md:left-270 md:-bottom-0" src="/red_half.svg" alt="red_cirkel" />     
+            <img class="absolute w-25 md:w-25 z-20 -left-10 md:left-280 md:top-40" src="/red_circle.svg" alt="red_cirkel" />        
+                <ul class="flex flex-row gap-5">
+                    <li class="text-lg md:text-xl font-bold drop-shadow-lg hover:underline hover:text-red-700"><a href="#mig" class={currentPath === "" ? "font-sans hover:font-display" : ""}>Hvem er jeg?</a></li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
+                    <li class="text-lg md:text-xl font-bold drop-shadow-lg hover:underline  hover:text-red-700"><a href="#cv" class={currentPath === "" ? "font-sans hover:font-display" : ""}>CV & kontakt</a></li>
+                </ul>
+        </nav>
+        <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+</button>
+    </div>
+    <nav id="mobilmenu" class="flex flex-col content-center" 
+    x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+        <ul class="border-t-2 border-b-2 border-black bg-gradient-to-r from-primary to-red-700 from-[50%]">
+            <li class="text-center py-2 font-bold hover:underline hover:text-red-700"><a href="#mig" class={currentPath === "" ? "font-sans hover:font-display" : ""}>Hvem er jeg?</a></li>
+            <li class="text-center py-2 font-bold hover:underline hover:text-red-700"><a href="#cv" class={currentPath === "" ? "font-sans hover:font-display" : ""}>CV & kontakt</a></li>
+        </ul>
+    </nav>
+</header>

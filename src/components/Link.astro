@@ -3,7 +3,7 @@
 const { href="#", target="_self", variant="textlink", size="standard"} = Astro.props; 
 
 //Definer den styling (Tailwind classes, der gør sig gældende for alle links
-const linkStyling = "bg-white/30 backdrop-blur-md border border-white/40 text-black font-display text-ml px-4 py-2 rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-xl hover:bg-red-700/30 hover:bg-red-700/50";
+const linkStyling = "bg-white/20 backdrop-blur-lg border border-white/50 text-black font-display text-ml px-4 py-2 rounded-xl shadow-lg transition-shadow duration-300 hover:text-primary hover:shadow-xl hover:bg-red-700/70";
 // bg-white/30 → hvid baggrund med 30% opacity.
 // backdrop-blur-md → slører baggrunden bag knappen (glass-effekten).
 // border border-white/40 → en let transparent border.
@@ -23,11 +23,11 @@ const variantClasses = {
 
 const sizeClasses = {
 
-"large": "text-ml",
+"large": "text-ml md:text-xl",
 
-"medium": "text-sm",
+"medium": "text-sm md:text-xl",
 
-"small": "text-xs"
+"small": "text-xs md:text-sm",
 
 };
 ---

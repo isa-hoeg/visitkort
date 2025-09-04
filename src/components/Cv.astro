@@ -4,17 +4,16 @@ const { tal, titel, firma, periode, jobtype } = Astro.props;
 ---
 <div class="grid grid-cols-2 md:grid grid-cols-4 gap-25 md:items-start py-2 m-4">
   <!-- Nummer -->
-  <div class="text-6xl underline font-bold col-span-1 hover:text-red-700">
+  <div class="text-6xl underline font-bold col-span-1 hover:text-red-700 hover:scale-110 transition-transform duration-300">
     <span class="font-italic">{tal ? tal.toString().padStart(2, "0"):""}</span>
        
   </div>
 
   <!-- Indhold -->
-  <div class="col-span-2">
+  <div class="col-span-3">
     <h3 class="font-display text-ml">{titel}</h3>
-     <p class="text-xs italic font-sans text-gray-600">{periode}</p>
-
-    <p class="font-serif text-xs">{firma}, {jobtype}</p>
+     <p class="text-xs md:text-base italic font-sans text-gray-600">{periode}</p>
+    <p class="text-xs md:text-base md:mr-10 font-serif">{firma}, {jobtype}</p>
   </div>
 </div>
 
