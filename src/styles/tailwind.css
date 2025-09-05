@@ -48,5 +48,9 @@
 
 @layer components {
 }
+
 @layer utilities {
+  .pulse {
+    animation: pulse 3s ease-in-out infinite;
+  }
 }

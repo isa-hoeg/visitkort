@@ -24,26 +24,26 @@ import Heading from "../components/Heading.astro";
       -->
         <Header></Header>
       <div>
-        <img class="mx-auto mb-2 w-150 md:w-200" src="/H1.svg" alt="navn" />
+        <img class="intersect:animate-fade-down intersect:duration-4000 mx-auto mb-2 w-150 md:w-200" src="/H1.svg" alt="navn" />
       </div>
       <div class="relative flex justify-center mt-5 mb-30">
         <!-- midterste billede -->
-        <img class="w-50 md:w-90 md:bottom-35 rounded-full z-40 relative" src="/mig.svg" alt="Isabella" />
+        <img class=" intersect:animate-fade-up intersect:duration-3000 w-50 md:w-90 md:bottom-35 rounded-full z-40 relative" src="/mig.svg" alt="Isabella" />
 
         <!-- højre billede -->
-        <img class="absolute w-30 md:w-60 rounded-full z-20 right-15 md:right-100 top-5 md:top-18" src="/rejse.svg" alt="solopgang" />
+        <img class="intersect:animate-fade-right intersect:duration-5000 absolute w-30 md:w-60 rounded-full z-20 right-20 md:right-100 top-5 md:top-18" src="/rejse.svg" alt="solopgang" />
 
         <!-- venstre billede -->
-        <img class="absolute w-20 md:w-45 rounded-full z-30 left-70 md:left-115 bottom-0 md:bottom-15" src="/cafe.svg" alt="cafe" />
+        <img class="intersect:animate-fade-left intersect:duration-5000 absolute w-20 md:w-45 rounded-full z-30 left-70 md:left-115 bottom-0 md:bottom-15" src="/cafe.svg" alt="cafe" />
         <!-- cirkler -->
         <img class="absolute w-45 md:w-85 z-20 -left-10 md:-left-4 bottom-5 md:top-10" src="/cirkel.svg" alt="cirkel" />
-        <img class="absolute w-30 md:w-65 z-20 left-25 md:left-70 bottom-35 md:bottom-35" src="/cirkel_rund.svg" alt="cirkel" />
-        <img class="absolute w-25 md:w-45 z-20 left-35 md:left-125 -bottom-40" src="/cirkel_rund.svg" alt="cirkel" />
+        <img class="intersect:animate-fade-down intersect:duration-4000 absolute w-30 md:w-65 z-20 left-25 md:left-70 bottom-35 md:bottom-35" src="/cirkel_rund.svg" alt="cirkel" />
+        <img class="intersect:animate-fade-up intersect:duration-4000 absolute w-25 md:w-45 z-20 left-35 md:left-125 -bottom-40" src="/cirkel_rund.svg" alt="cirkel" />
     </div>
   </div>
   </section>
-      <img class="w-100 md:w-170 mx-auto mt-15 mb-5" src="/grafisk_designer.webp" alt="grafisk designer" />
-  <section id="mig" mx-auto>
+      <img class="w-100 md:w-170 mx-auto mt-15 mb-5 intersect:animate-fade-right intersect:duration-3000" src="/grafisk_designer.webp" alt="grafisk designer" />
+  <section id="mig" class="mx-auto intersect:animate-fade-left intersect:duration-3000">
     <div class="bg-white/30 backdrop-blur-md border shadow-lg transition-shadow rounded-sm p-5 m-5 md:mx-30">
       <Heading htmlheading="h2" size="medium" font="sans" stylingclasses="text-center pt-2 pb-5 md:pt-5 md:pb-10">
       Isabella Hoeg Hansen
@@ -74,7 +74,7 @@ import Heading from "../components/Heading.astro";
     </div>
 
   </section>
-  <section>
+  <section class="intersect:animate-fade-right intersect:duration-3000">
     <Egenskaber></Egenskaber>
     <hr class="my-6 h-px w-full bg-black border-0" />
   </section>
@@ -93,14 +93,14 @@ import Heading from "../components/Heading.astro";
    </div>
   <div class="bg-[url(/baggrund.webp)] bg-cover p-10">
     <div class="bg-[#EEF6E7] border border-black rounded-sm px-8 py-5 m-2 mb-15">
-      <div class="flex items-center gap-10 p-3">
+      <div class="flex items-center gap-10 p-3 intersect:animate-fade-left intersect:duration-3000">
       <img class="w-18 rounded-full z-40 relative" src="/mig.svg" alt="Isabella" />
         <div>
         <Heading htmlheading="h4" size="xsmall" font="display">Min værktøjskasse:</Heading> 
           <Heading htmlheading="h4" size="xxsmall" font="font-sans">Isabella Hoeg Hansen</Heading>
         </div>
       </div>
-      <div class="flex flex-wrap justify-center">
+      <div class="flex flex-wrap justify-center intersect:animate-fade-left intersect:duration-3000">
       <Skills program="Figma" description="UI/UX designværktøj til prototyper, wireframes og samarbejde i realtid." />
       <Skills program="Adobe Illustrator" description="Vektorgrafikprogram til logoer, illustrationer og ikoner." />
       <Skills program="Astro" description="Frontend-framework til statiske sites med komponentbaseret opbygning." />
@@ -115,26 +115,26 @@ import Heading from "../components/Heading.astro";
     
   
     <div class="bg-[#EEF6E7] border border-black rounded-sm px-8 py-5 m-2">
-      <img class="w-70 mx-auto p-3" src="/grafisk_designer.webp" alt="grafisk designer" />
+      <img class="w-70 mx-auto p-3 intersect:animate-fade-left intersect:duration-3000" src="/grafisk_designer.webp" alt="grafisk designer" />
       <Heading htmlheading="h4" size="xsmall" font="display" stylingclasses="text-center">Kontaktoplysninger</Heading>
-        <div class="flex flex-col gap-5 m-8">
-          <Link href="tel:27648808" variant="primary" size="small" class="flex items-center gap-2">
-            <img class="w-5 h-5 inline-block" src="/phone.svg" alt="telefon-ikon" />
+        <div class="flex flex-col gap-5 m-8 ">
+          <Link href="tel:27648808" variant="primary" size="small" class="flex items-center gap-2 ">
+            <img class="w-5 h-5 inline-block intersect:animate-fade-right intersect:duration-3000" src="/phone.svg" alt="telefon-ikon" />
             <span class="p-2">27 64 88 08</span>
           </Link>
 
           <Link href="mailto:isabellahoeghansen@gmail.com" variant="primary" size="small" class="flex items-center gap-2">
-            <img class="w-5 h-5 inline-block" src="/mail.svg" alt="mail-ikon" />
+            <img class="w-5 h-5 inline-block intersect:animate-fade-right intersect:duration-3000 delay-100" src="/mail.svg" alt="mail-ikon" />
             <span class="p-2">isabellahoeghansen@gmail.com</span>
           </Link>
 
           <Link href="https://www.facebook.com/?ref=logo" variant="primary" size="small" class="flex items-center gap-2">
-            <img class="w-5 h-5 inline-block" src="/fb.svg" alt="facebook-ikon" />
+            <img class="w-5 h-5 inline-block intersect:animate-fade-right intersect:duration-3000 delay-200" src="/fb.svg" alt="facebook-ikon" />
             <span class="p-2">Isabella Hoeg Hansen</span>
           </Link>
 
           <Link href="https://www.linkedin.com/in/isabella-hoeg-hansen-563518239/" target="_blank" variant="primary" size="small" class="flex items-center gap-2">
-            <img class="w-5 h-5 inline-block" src="/linkedin.svg" alt="linkedin-ikon" />
+            <img class="w-5 h-5 inline-block intersect:animate-fade-right intersect:duration-3000 delay-300" src="/linkedin.svg" alt="linkedin-ikon" />
             <span class="p-2">LinkedIn</span>
           </Link>
         </div>
