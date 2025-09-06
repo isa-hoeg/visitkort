@@ -44,9 +44,10 @@ const { program, description } = Astro.props;
 <div x-data="{ open: false }" class="relative inline-block m-2">
   <!-- Skill-box -->
   <div 
-    class="bg-white/20 backdrop-blur-lg border border-white/50 text-black font-display text-xs px-4 py-3 rounded-xl shadow-lg cursor-pointer transition-shadow duration-300 hover:shadow-xl hover:bg-red-700/70 hover:text-primary"
+    class="flex items-center gap-2 bg-white/20 backdrop-blur-lg border border-white/50 text-black font-display text-xs px-4 py-3 rounded-xl shadow-lg cursor-pointer transition-shadow duration-300 hover:shadow-xl hover:bg-red-700/70 hover:text-primary"
     x-on:click="open = !open"
   >
+    <slot name="icon" /> 
     {program}
   </div>
 

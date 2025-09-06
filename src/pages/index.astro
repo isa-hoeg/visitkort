@@ -36,7 +36,7 @@ import Heading from "../components/Heading.astro";
         <!-- venstre billede -->
         <img class="intersect:animate-fade-left intersect:duration-5000 absolute w-20 md:w-45 rounded-full z-30 left-70 md:left-115 bottom-0 md:bottom-15" src="/cafe.svg" alt="cafe" />
         <!-- cirkler -->
-        <img class="absolute w-45 md:w-85 z-20 -left-10 md:-left-4 bottom-5 md:top-10" src="/cirkel.svg" alt="cirkel" />
+        <img class="intersect:animate-fade-left intersect:duration-4000 absolute w-45 md:w-85 z-20 -left-10 md:-left-4 bottom-5 md:top-10" src="/cirkel.svg" alt="cirkel" />
         <img class="intersect:animate-fade-down intersect:duration-4000 absolute w-30 md:w-65 z-20 left-25 md:left-70 bottom-35 md:bottom-35" src="/cirkel_rund.svg" alt="cirkel" />
         <img class="intersect:animate-fade-up intersect:duration-4000 absolute w-25 md:w-45 z-20 left-35 md:left-125 -bottom-40" src="/cirkel_rund.svg" alt="cirkel" />
     </div>
@@ -101,15 +101,49 @@ import Heading from "../components/Heading.astro";
         </div>
       </div>
       <div class="flex flex-wrap justify-center intersect:animate-fade-left intersect:duration-3000">
-      <Skills program="Figma" description="UI/UX designværktøj til prototyper, wireframes og samarbejde i realtid." />
-      <Skills program="Adobe Illustrator" description="Vektorgrafikprogram til logoer, illustrationer og ikoner." />
-      <Skills program="Astro" description="Frontend-framework til statiske sites med komponentbaseret opbygning." />
-      <Skills program="Adobe Premiere Pro" description="Professionel videoredigering til klipning og postproduktion." />
-      <Skills program="Visual Studio Code" description="Kode-editor med extensions, IntelliSense og Git-integration." />
-      <Skills program="GitHub" description="Platform til versionskontrol, kodehosting og samarbejde på projekter." />
-      <Skills program="Microsoft Office" description="Kontorpakke med Word, Excel, PowerPoint og Outlook." />
-      <Skills program="Canva" description="Online designværktøj til grafisk design, sociale medier og præsentationer." />
-      <Skills program="Adobe After Effects" description="Software til motion graphics, animationer og visuelle effekter." />
+      <Skills program="Figma" description="UI/UX designværktøj til prototyper, wireframes og samarbejde i realtid.">
+        <svg slot="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" class="size-5"> <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+      </Skills>
+
+      <Skills program="Adobe Illustrator" description="Vektorgrafikprogram til logoer, illustrationer og ikoner."><svg slot="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" class="size-5"> <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg></Skills>
+      <Skills program="Astro" description="Frontend-framework til statiske sites med komponentbaseret opbygning."><svg slot="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" class="size-5"> <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg></Skills>
+      <Skills program="Adobe Premiere Pro" description="Professionel videoredigering til klipning og postproduktion."><svg slot="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" class="size-5"> <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg></Skills>
+      <Skills program="Visual Studio Code" description="Kode-editor med extensions, IntelliSense og Git-integration."><svg slot="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" class="size-5"> <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg></Skills>
+      <Skills program="GitHub" description="Platform til versionskontrol, kodehosting og samarbejde på projekter."><svg slot="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" class="size-5"> <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg></Skills>
+      <Skills program="Microsoft Office" description="Kontorpakke med Word, Excel, PowerPoint og Outlook."><svg slot="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" class="size-5"> <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg></Skills>
+      <Skills program="Canva" description="Online designværktøj til grafisk design, sociale medier og præsentationer."><svg slot="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" class="size-5"> <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg></Skills>
+      <Skills program="Adobe After Effects" description="Software til motion graphics, animationer og visuelle effekter."><svg slot="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" class="size-5"> <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg></Skills>
+      <Skills program="Tailwind CSS" description="Hurtig, fleksibel styling med klasser direkte i HTML."><svg slot="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" class="size-5"> <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg></Skills>
       </div>
     </div>
     
